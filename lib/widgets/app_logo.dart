@@ -9,7 +9,7 @@ class AppLogo extends StatelessWidget {
     final textTheme = theme.textTheme;
 
     return Text(
-      'QuickSocial',
+      'Social App',
       style: textTheme.headlineMedium?.copyWith(
         fontWeight: FontWeight.bold,
         color: theme.colorScheme.primary,

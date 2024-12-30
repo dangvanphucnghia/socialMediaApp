@@ -4,3 +4,5 @@ export 'notifications_page.dart';
 export 'profile_page.dart';
 export 'splash_page.dart';
 export 'user_story_page.dart';
+export 'post_list_page.dart';
+export 'user_list_page.dart';

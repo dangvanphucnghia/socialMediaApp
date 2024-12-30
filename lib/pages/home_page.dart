@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:quick_social/common/common.dart';
 import 'package:quick_social/models/models.dart';
 import 'package:quick_social/pages/pages.dart';
+import 'package:quick_social/pages/user_list_page.dart';
+import 'package:quick_social/pages/post_list_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -60,6 +62,8 @@ class _HomePageState extends State<HomePage> {
         const FeedPage(),
         const NotificationsPage(),
         ProfilePage(user: User.dummyUsers[0]),
+        const UserListPage(), // Trang danh sách người dùng
+        const PostListPage(), // Trang danh sách bài viết
       ],
     );
   }
@@ -105,6 +109,22 @@ class _HomePageState extends State<HomePage> {
           ),
           label: const Text('Profile'),
         ),
+        NavigationRailDestination(
+          icon: const Icon(Icons.people_outline),
+          selectedIcon: Icon(
+            Icons.people,
+            color: theme.colorScheme.primary,
+          ),
+          label: const Text('Users'),
+        ),
+        NavigationRailDestination(
+          icon: const Icon(Icons.post_add_outlined),
+          selectedIcon: Icon(
+            Icons.post_add,
+            color: theme.colorScheme.primary,
+          ),
+          label: const Text('Posts'),
+        ),
       ],
     );
   }
@@ -141,6 +161,22 @@ class _HomePageState extends State<HomePage> {
             color: theme.colorScheme.primary,
           ),
           label: 'Profile',
+        ),
+        NavigationDestination(
+          icon: const Icon(Icons.people_outline),
+          selectedIcon: Icon(
+            Icons.people,
+            color: theme.colorScheme.primary,
+          ),
+          label: 'Users',
+        ),
+        NavigationDestination(
+          icon: const Icon(Icons.post_add_outlined),
+          selectedIcon: Icon(
+            Icons.post_add,
+            color: theme.colorScheme.primary,
+          ),
+          label: 'Posts',
         ),
       ],
     );
